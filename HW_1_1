@@ -1,0 +1,9 @@
+#Ex.1
+x = input("Input a string: ")
+for i in range(len(x)//2):
+    if x[i] != x[-i-1]:
+        print("not palindrome")
+        exit()
+    else:
+        continue
+print("palindrome")

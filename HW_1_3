@@ -1,0 +1,12 @@
+#Ex.3
+
+N = int(input("Count of massive: "))
+n = [input() for i in range(N)]
+x = len(n)
+for j in range(x):
+    if n[j] != '0':
+        continue
+    else:
+        del n[j]
+        n.insert(0, '0')
+print(n)

@@ -1,0 +1,26 @@
+#Ex.5
+import re
+s = input("Input a expression: ")
+numbers = re.findall('\d+', s)
+fnum = int(numbers[0])
+operators = re.findall('\D+', s)
+b = 1
+k = 0
+while(k < len(operators)):
+    if(operators[k] == "+"):
+        fnum += int(numbers[b])
+        b += 1
+        k += 1
+    elif(operators[k] == "-"):
+        fnum -= int(numbers[b])
+        b += 1
+        k += 1
+    elif(operators[k] == "*"):
+        fnum *= int(numbers[b])
+        b += 1
+        k += 1
+    elif(operators[k] == "/"):
+        fnum /= int(numbers[b])
+        b += 1
+        k += 1
+print("Result:", fnum)

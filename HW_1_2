@@ -1,0 +1,11 @@
+#Ex.2
+N = int(input("Count of massive: "))
+while N <= 2:
+    print("N < 2, try again: ")
+    N = int(input("Count of massive: "))
+if N > 2:
+    n = [input() for i in range(N)]
+    n.sort()
+    for i in n:
+        x = [n[-2], n[-1]]
+    print(x)
