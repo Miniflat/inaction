@@ -1,4 +1,6 @@
 def check_input(x, y):
+    # if/else можно было не писать, а просто оставить:
+    # return 0 <= x <= 2 and 0 <= y <= 2
     if 0 <= x <= 2 and 0 <= y <= 2:
         return True
     else:
@@ -18,6 +20,15 @@ def make_turn(a, x, y, player):
                 return False
             else:
                 continue
+
+
+# проходить по всему полю необязательно, можно было проще:
+def make_turn2(a, x, y, player):
+    if a[x][y] < 0:
+        return False
+    a[x][y] = player
+    return
+# то же самое получилось бы
 
 
 def check_draw(a):
@@ -40,8 +51,10 @@ def check_win(a, player):
                 return True
             if a[0][2] == a[1][1] == a[2][0] == player:
                 return True
-            else:
-                return False
+            # это неправильно, return False должен быть за циклом, иначе функция проверит только первую строку и только первый столбец
+            # else:
+            #     return False
+    return False
 
 
 def print_grid(a):

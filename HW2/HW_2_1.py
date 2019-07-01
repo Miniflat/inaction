@@ -7,6 +7,7 @@ try:
 except (TypeError, ValueError):
     print("Enter date of birth in format DD.MM.YYYY. ")
 else:
+    # можно было использовать calendar.day_name
     dayweek = {
         0: "Monday",
         1: "Tuesday",
